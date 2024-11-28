@@ -51,6 +51,13 @@
             box-shadow: 0 0 8px 2px #00ff7f; /* Green glowing effect */
         }
 
+        .menu-icon {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #fff;
+        }
+
         /* Main Layout */
         .container {
             display: flex;
@@ -168,9 +175,16 @@
                 flex-direction: column;
                 gap: 10px;
                 align-items: center;
+                display: none; /* Initially hide menu on small screens */
+                width: 100%;
+                text-align: center;
             }
 
-            nav ul li {
+            nav ul.active {
+                display: flex; /* Show menu when active class is added */
+            }
+
+            .menu-icon {
                 display: block;
             }
         }
@@ -191,7 +205,8 @@
     <!-- Navbar -->
     <nav>
         <div class="logo">Jeffery Ajaguna Abbey</div>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="experience.html">Work History</a></li>
@@ -227,6 +242,14 @@
     <footer>
         Page | 02
     </footer>
+
+    <script>
+        // Toggle Menu Visibility
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
