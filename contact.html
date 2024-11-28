@@ -21,6 +21,7 @@
             align-items: center;
             padding: 10px 20px;
             background-color: #000;
+            position: relative;
         }
 
         nav .logo {
@@ -49,6 +50,20 @@
         nav ul li a:hover {
             color: #00ff7f;
             box-shadow: 0 0 8px 2px #00ff7f;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
         }
 
         /* Main Layout */
@@ -159,6 +174,26 @@
             .social-links a {
                 font-size: 1em;
             }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #000;
+                padding: 10px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
 
         @media (max-width: 480px) {
@@ -181,10 +216,16 @@
     </style>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav>
         <div class="logo">Jeffery Ajaguna Abbey</div>
-        <ul>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="experience.html">Work History</a></li>
@@ -231,6 +272,13 @@
     <footer>
         Page | 05
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
