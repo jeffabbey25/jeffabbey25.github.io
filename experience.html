@@ -21,6 +21,7 @@
             align-items: center;
             padding: 10px 20px;
             background-color: #000;
+            position: relative;
         }
 
         nav .logo {
@@ -49,6 +50,20 @@
         nav ul li a:hover {
             color: #00ff7f; /* Green text on hover */
             box-shadow: 0 0 8px 2px #00ff7f; /* Green glowing effect */
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
         }
 
         /* Main Layout */
@@ -138,14 +153,35 @@
             .experience-item h3 {
                 font-size: 1.2em;
             }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #000;
+                padding: 10px;
+                border-radius: 8px;
+                width: 200px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                border-bottom: 1px solid #555;
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
 
         @media (max-width: 480px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
             nav ul li {
                 margin-bottom: 10px;
             }
@@ -168,13 +204,18 @@
     <!-- Navbar -->
     <nav>
         <div class="logo">Jeffery Ajaguna Abbey</div>
-        <ul>
+        <ul id="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="experience.html">Work History</a></li>
             <li><a href="project.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -240,5 +281,12 @@
         Page | 03
     </footer>
 
+    <script>
+        // Toggle the navigation menu
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
