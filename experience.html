@@ -30,15 +30,20 @@
             padding-bottom: 10px;
         }
 
-        .experience-item h3 {
-            color: #00ff7f;
+        .experience-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
         }
 
-        .experience-item .number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #00ff7f;
-            margin-right: 10px;
+        .current-experience {
+            background-color: #00ff7f;
+            color: #101010;
+        }
+
+        .previous-experience {
+            background-color: #ffffff;
+            color: #101010;
         }
 
         footer {
@@ -52,27 +57,11 @@
             .right-section h1 {
                 font-size: 2.5em;
             }
-
-            .experience-item h3 {
-                font-size: 1.2em;
-            }
-
-            .experience-item .number {
-                font-size: 1.5em;
-            }
         }
 
         @media (max-width: 480px) {
             .right-section h1 {
                 font-size: 2em;
-            }
-
-            .experience-item h3 {
-                font-size: 1.1em;
-            }
-
-            .experience-item .number {
-                font-size: 1.3em;
             }
         }
     </style>
@@ -100,57 +89,43 @@
     <!-- Main Content -->
     <div class="container py-5">
         <div class="row">
-            <!-- Left Section -->
-            <div class="col-md-6">
-                <img src="experience1.jpg" alt="Experience Image 1" class="img-fluid rounded">
-            </div>
-            <!-- Right Section -->
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h1>Work History</h1>
-                <div class="experience-item">
-                    <span class="number">01.</span>
-                    <div>
-                        <h3>IT Support Executive for Leads & Coordinator - ReelFruit</h3>
-                        <p>Sector: Fruit Packaging (Manufacturing)</p>
-                        <p>Duration: September 2024 - Present</p>
-                        <p>Role: Currently leading the IT team to ensure smooth operations, system management, and enhanced productivity.</p>
-                    </div>
+                <!-- Current Experience -->
+                <div class="experience-item current-experience">
+                    <h3>IT Support Executive for Leads & Coordinator - ReelFruit</h3>
+                    <p>Sector: Fruit Packaging (Manufacturing)</p>
+                    <p>Duration: September 2024 - Present</p>
+                    <p>Role: Currently leading the IT team to ensure smooth operations, system management, and enhanced productivity.</p>
                 </div>
-                <div class="experience-item">
-                    <span class="number">02.</span>
-                    <div>
-                        <h3>Snr. Support Executive - PPC Limited</h3>
-                        <p>Sector: Healthcare</p>
-                        <p>Duration: March 2022 - September 2024</p>
-                        <p>Role: Managed IT infrastructure, remote support, and systems integration for hospitals.</p>
-                    </div>
+
+                <!-- Previous Experiences -->
+                <div class="experience-item previous-experience">
+                    <h3>Snr. Support Executive - PPC Limited</h3>
+                    <p>Sector: Healthcare</p>
+                    <p>Duration: March 2022 - September 2024</p>
+                    <p>Role: Managed IT infrastructure, remote support, and systems integration for hospitals.</p>
                 </div>
-                <div class="experience-item">
-                    <span class="number">03.</span>
-                    <div>
-                        <h3>System Analyst - Pajuno Development Company LTD</h3>
-                        <p>Sector: Information Technology (Banking)</p>
-                        <p>Duration: January 2019 - September 2019</p>
-                        <p>Role: Enhanced system analytics and developed robust solutions for FinTech clients.</p>
-                    </div>
+
+                <div class="experience-item previous-experience">
+                    <h3>System Analyst - Pajuno Development Company LTD</h3>
+                    <p>Sector: Information Technology (Banking)</p>
+                    <p>Duration: January 2019 - September 2019</p>
+                    <p>Role: Enhanced system analytics and developed robust solutions for FinTech clients.</p>
                 </div>
-                <div class="experience-item">
-                    <span class="number">04.</span>
-                    <div>
-                        <h3>IT Support Executive - BHS International LTD</h3>
-                        <p>Sector: Public Sector</p>
-                        <p>Duration: 2017 - 2019</p>
-                        <p>Role: Provided secure networking solutions, access management, and troubleshooting.</p>
-                    </div>
+
+                <div class="experience-item previous-experience">
+                    <h3>IT Support Executive - BHS International LTD</h3>
+                    <p>Sector: Public Sector</p>
+                    <p>Duration: 2017 - 2019</p>
+                    <p>Role: Provided secure networking solutions, access management, and troubleshooting.</p>
                 </div>
-                <div class="experience-item">
-                    <span class="number">05.</span>
-                    <div>
-                        <h3>Support Engineer - Emporg Limited</h3>
-                        <p>Sector: IT</p>
-                        <p>Duration: 2015 - 2017</p>
-                        <p>Role: Delivered technical support and optimized user environments across multiple platforms.</p>
-                    </div>
+
+                <div class="experience-item previous-experience">
+                    <h3>Support Engineer - Emporg Limited</h3>
+                    <p>Sector: IT</p>
+                    <p>Duration: 2015 - 2017</p>
+                    <p>Role: Delivered technical support and optimized user environments across multiple platforms.</p>
                 </div>
             </div>
         </div>
